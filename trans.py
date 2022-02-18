@@ -1,13 +1,10 @@
 def step_to_transform(array):
     B = []
     flag = True
-    for i in range(len(array)-1):
-        for j in range(len(array)-1-i):
+    for i in range(0,len(array)):
+        for j in range(len(array)-i):
             k = i + j
-            if k == j:
-                max = array[0]
-            else: 
-                max = 0
+            max = array[k]
             for x in array[j:k]:
                 if max <= x:
                     max = x
